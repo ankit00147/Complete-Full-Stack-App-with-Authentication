@@ -1,12 +1,39 @@
-# React + Vite
+Complete Full-Stack App with Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+auth-fullstack/                # Main project folder
+│
+├── server.js                  # Express backend main file
+├── package.json               # Backend dependencies & scripts
+├── package-lock.json
+├── .env                       # Backend environment variables (JWT_SECRET, PORT)
+│
+├── client/                    # React frontend (Vite)
+│   ├── index.html
+│   ├── package.json           # Frontend dependencies & scripts
+│   ├── vite.config.js
+│   └── src/                   # React source code
+│       ├── main.jsx           # App entrypoint
+│       ├── App.jsx            # Routes setup
+│       │
+│       ├── api.js             # Helper for fetch with JWT
+│       │
+│       ├── auth/              # Auth context for global login state
+│       │   └── AuthContext.jsx
+│       │
+│       ├── components/        # Reusable components
+│       │   └── ProtectedRoute.jsx
+│       │
+│       ├── pages/             # Pages (each is a route)
+│       │   ├── Login.jsx
+│       │   ├── Register.jsx
+│       │   └── Dashboard.jsx
+│       │
+│       └── assets/            # (optional) images, css files, logos
+│
+└── README.md                  # (optional) project notes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
